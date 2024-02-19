@@ -32,7 +32,7 @@
             foreach($categorias as $categoria):
                 ?>     
                 <li>
-                    <a href="categorias.php?id=<?=$categoria['id']?>"><?= $categoria['nombre']?></a>
+                    <a href="categoria.php?id=<?=$categoria['id']?>"><?= $categoria['nombre']?></a>
                 </li>
             <?php endforeach;
             endif;

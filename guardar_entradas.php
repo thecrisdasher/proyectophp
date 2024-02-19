@@ -41,11 +41,13 @@ if(count($errores) == 0){
     //insertar usuario en la base de datos 
     $sql= "INSERT INTO entradas values(NULL, $usuario, $categoria, '$titulo', '$descripcion', CURRENT_DATE())";
     $guardar = mysqli_query($db,$sql);
+    header("Location: index.php");
 
 }else{
     $_SESSION["errores_entradas"] = $errores;
+    header('Location: crear_entradas.php');
 }
 
 
-header("Location: index.php")
+
 ?>

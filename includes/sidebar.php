@@ -9,7 +9,7 @@
    <!--BOTONES -->
    <a href="crear_entradas.php" class="boton">Crear Entradas</a></br>
    <a href="crear_categoria.php" class="boton">Crear Categoría</a></br>
-   <a href="log_out.php" class="boton">Mis Datos</a></br>
+   <a href="mis_datos.php" class="boton">Mis Datos</a></br>
    <a href="log_out.php" class="boton">Cerrar Sesión</a>
    </div>
    <?php endif; ?>

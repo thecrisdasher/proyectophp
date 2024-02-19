@@ -1,12 +1,16 @@
 <?php require_once 'includes/header.php';?> 
 <?php require_once 'includes/sidebar.php';?> 
-    <!-- Caja principal -->
+
+ <!-- Caja principal -->
+ <?php
+    $categoria = conseguirCategoria($db, $_GET['id']);
+    ?>
     <div id="principal">
-    <h1>Ultimas entradas</h1>
+    <h1>Entradas de <?= $categoria['nombre'] ?></h1>
 
 
     <?php
-    $entradas = conseguirEntradas($db, true);
+    $entradas = conseguirEntradas($db, null, $_GET['id']);
     if(!empty($entradas)):
         foreach($entradas as $entrada):
     ?>
@@ -25,9 +29,6 @@
     endif;
     ?>
 
-    <div id="ver-todas" >
-            <a href="entradas.php">Ver todas las entradas</a>
-        </div>
     </div> <!--fin principal-->
       
   

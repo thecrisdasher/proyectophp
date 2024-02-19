@@ -2,11 +2,11 @@
 <?php require_once 'includes/sidebar.php';?> 
     <!-- Caja principal -->
     <div id="principal">
-    <h1>Ultimas entradas</h1>
+    <h1>Todas las entradas</h1>
 
 
     <?php
-    $entradas = conseguirEntradas($db, true);
+    $entradas = conseguirEntradas($db, null);
     if(!empty($entradas)):
         foreach($entradas as $entrada):
     ?>
@@ -25,9 +25,6 @@
     endif;
     ?>
 
-    <div id="ver-todas" >
-            <a href="entradas.php">Ver todas las entradas</a>
-        </div>
     </div> <!--fin principal-->
       
   
