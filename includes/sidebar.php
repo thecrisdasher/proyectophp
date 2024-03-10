@@ -2,6 +2,15 @@
    <!-- Barra lateral -->
   
    <aside id="sidebar">
+   <div id="Buscador" class="block-aside">
+        <h3>Buscar</h3>
+
+        <form action="buscar.php" method="POST">
+            <input type="text" name="busqueda"/>
+            <input type="submit" value="Buscar"/>
+            
+        </form>
+    </div>
 
    <?php if(isset($_SESSION['usuario'])): ?>
    <div id="usuario_logeado" class="block-aside">

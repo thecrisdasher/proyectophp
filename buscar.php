@@ -3,7 +3,13 @@
 
  <!-- Caja principal -->
  <?php
-    $categoria = conseguirCategoria($db, $_GET['id']);
+
+    if(!isset($_POST['busqueda'])){
+        header("Location: index.php");
+    }
+
+    $busqueda = conseguirEntradas($db, null, null, $_POST['busqueda']);
+    
     ?>
     <div id="principal">
     <h1>Entradas de <?= $categoria['nombre'] ?></h1>
